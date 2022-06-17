@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Open Sans', sans-serif;
+}
+
+body, .wrapper, .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    color: white;
+    min-height: 100vh;
+    /*background-color: #4a98f7;*/
+    background-image: url(https://wallpaper.dog/large/20515982.jpg);
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.wrapper{
+    width: fit-content;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 30px 30px 38px;
+}
+.wrapper i{
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 5rem;
+    background-image: linear-gradient(315deg, #17f9f2 40%, #b0f9a9 74%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 200ms ease-in;
+
+}
+.wrapper h1{
+    font-size: 2.75rem;
+    font-weight: 400;
+}
+
+.wrapper .content{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.wrapper .content.disable{
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.content .column{
+    border-radius: 5px;
+    padding: 0 10px;
+    width: calc((100% / 3) - 5px);
+}
+
+.column select{
+    outline: none;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    height: 53px;
+    width: fit-content;
+    font-size: 19px;
+    padding: 5px;
+}
+
+.column select option{
+    background-color: black;
+    text-align: center;
+}
+
+.wrapper button{
+    width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    padding: 17px 0;
+    border-radius: 5px;
+    background-color: rgba(0, 81, 255, 0.4);
+    transition: all 100ms ease-in;
+    color: white;
+}
+.wrapper button:hover{
+    background-color: rgba(0, 81, 255, 0.8);
+    cursor: pointer;
+}
+
+@keyframes slidein {
+    0% {
+      top: -1900px;
+    }
+    100% {
+      top: 0px;
+    }
+}
+
+.time_up{
+    width: fit-content;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(255, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 30px 30px 38px;
+    animation: slidein 1s ease-in-out;
+    z-index: 1;
+}
